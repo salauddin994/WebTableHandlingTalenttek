@@ -1,0 +1,281 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-03-31T05:47:34.156Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3743000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDef.Hook.openBrowser()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Login with valid email and password",
+        "description": "",
+        "id": "login;login-with-valid-email-and-password",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDef.Hook.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 32000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am at talenttek logIn page",
+            "match": {
+              "location": "StepDef.LogIn_Steps.iAmAtTalenttekLogInPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I input valid email address",
+            "match": {
+              "location": "StepDef.LogIn_Steps.iInputValidEmailAddress()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I input valid password",
+            "match": {
+              "location": "StepDef.LogIn_Steps.iInputValidPassword()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click on LogIn button",
+            "match": {
+              "location": "StepDef.LogIn_Steps.iClickOnLogInButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I will verify i loggedIn successfully in my existing account",
+            "match": {
+              "location": "StepDef.Profile_Steps.iWillVerifyILoggedInSuccessfullyInMyExistingAccount()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login"
+          },
+          {
+            "name": "@regression"
+          },
+          {
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Login",
+    "description": "",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/LogIn/LogIn.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-03-31T05:47:37.961Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4263000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDef.Hook.openBrowser()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "SignUp in Talenttek and Sign back in and Verify firstName,lastName and email from WebTable page",
+        "description": "",
+        "id": "signup;signup-in-talenttek-and-sign-back-in-and-verify-firstname-lastname-and-email-from-webtable-page",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDef.Hook.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am at talenttek logIn page",
+            "match": {
+              "location": "StepDef.LogIn_Steps.iAmAtTalenttekLogInPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 257000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I click on Create New account button",
+            "match": {
+              "location": "StepDef.LogIn_Steps.iClickOnCreateNewAccountButton()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1224000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I filled out all the required field with valid information",
+            "match": {
+              "location": "StepDef.SignUp_Steps.iFilledOutAllTheRequiredFieldWithValidInformation()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 61000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I click on agree terms to terms cookies and data use policy",
+            "match": {
+              "location": "StepDef.SignUp_Steps.iClickOnAgreeTermsToTermsCookiesAndDataUsePolicy()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 63000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click on Create My Account button",
+            "match": {
+              "location": "StepDef.SignUp_Steps.iClickOnCreateMyAccountButton()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I verify with Newly Created Student ID",
+            "match": {
+              "location": "StepDef.SignUp_Steps.iVerifyWithNewlyCreatedStudentID()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I click on LogIn link",
+            "match": {
+              "location": "StepDef.SignUp_Steps.iClickOnLogInLink()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I input my newly created credentials",
+            "match": {
+              "location": "StepDef.LogIn_Steps.iInputMyNewlyCreatedCredentials()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I click on LogIn button",
+            "match": {
+              "location": "StepDef.LogIn_Steps.iClickOnLogInButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I will Verify firstName,lastName and email from WebTable page",
+            "match": {
+              "location": "StepDef.WebTable_Steps.iWillVerifyFirstNameLastNameAndEmailFromWebTablePage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@signup"
+          },
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@regression"
+          }
+        ]
+      }
+    ],
+    "name": "SignUp",
+    "description": "",
+    "id": "signup",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/SignUp/SignUp.feature",
+    "tags": []
+  }
+]
