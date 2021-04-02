@@ -33,5 +33,15 @@ public class Util extends config{
         radioButtons.get(0).click();
     }
 
+    public static void WebTable(){
+        List<WebElement> row=driver.findElements(By.xpath("//*[@id='page-content-wrapper']/div/table/tbody"));
+        int rowsize=row.size();
+        System.out.println("Row of this table>>>>>"+rowsize);
+
+
+
+
+    }
+
 
 }

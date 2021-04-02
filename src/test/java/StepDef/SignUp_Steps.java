@@ -28,11 +28,13 @@ public class SignUp_Steps extends config {
 
     @And("I verify with Newly Created Student ID")
     public void iVerifyWithNewlyCreatedStudentID() {
+        signUp.AssertionWithStudentID();
 
     }
 
     @Then("I click on LogIn link")
     public void iClickOnLogInLink() {
+        signUp.clickOnLogInLinkFromHeader();
 
     }
 }

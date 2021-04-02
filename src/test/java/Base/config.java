@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class config {
+public class config extends TestData {
 
     public static WebDriver driver;
     public static WebDriver initDriver(String driverType){

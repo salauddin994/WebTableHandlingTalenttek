@@ -1,5 +1,6 @@
 package StepDef;
 
+import Base.TestData;
 import Base.config;
 import PageObject.LogInPage;
 import io.cucumber.java.en.Given;
@@ -27,11 +28,14 @@ public class LogIn_Steps extends config {
 
     @Then("I input my newly created credentials")
     public void iInputMyNewlyCreatedCredentials() {
+        login.inputStudentEmailOrID(TestData.global_studentID);
+        login.inputStudentPassword(TestData.global_studentPassword);
 
     }
 
     @When("I click on LogIn button")
     public void iClickOnLogInButton() {
+        login.clickOnlogInButton();
 
     }
 

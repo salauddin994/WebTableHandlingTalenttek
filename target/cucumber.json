@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-03-31T05:47:34.156Z",
+        "start_timestamp": "2021-04-02T02:13:45.591Z",
         "before": [
           {
             "result": {
-              "duration": 3743000000,
+              "duration": 4526000000,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 32000000,
+              "duration": 34000000,
               "status": "passed"
             },
             "line": 5,
@@ -68,6 +68,7 @@
           },
           {
             "result": {
+              "duration": 123000000,
               "status": "passed"
             },
             "line": 8,
@@ -79,6 +80,7 @@
           },
           {
             "result": {
+              "duration": 1000000,
               "status": "passed"
             },
             "line": 9,
@@ -113,11 +115,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-03-31T05:47:37.961Z",
+        "start_timestamp": "2021-04-02T02:13:50.307Z",
         "before": [
           {
             "result": {
-              "duration": 4263000000,
+              "duration": 3943000000,
               "status": "passed"
             },
             "match": {
@@ -144,7 +146,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6000000,
+              "duration": 7000000,
               "status": "passed"
             },
             "line": 4,
@@ -156,7 +158,7 @@
           },
           {
             "result": {
-              "duration": 257000000,
+              "duration": 380000000,
               "status": "passed"
             },
             "line": 5,
@@ -168,7 +170,7 @@
           },
           {
             "result": {
-              "duration": 1224000000,
+              "duration": 1555000000,
               "status": "passed"
             },
             "line": 6,
@@ -180,7 +182,7 @@
           },
           {
             "result": {
-              "duration": 61000000,
+              "duration": 80000000,
               "status": "passed"
             },
             "line": 7,
@@ -192,7 +194,7 @@
           },
           {
             "result": {
-              "duration": 63000000,
+              "duration": 83000000,
               "status": "passed"
             },
             "line": 8,
@@ -204,6 +206,7 @@
           },
           {
             "result": {
+              "duration": 257000000,
               "status": "passed"
             },
             "line": 9,
@@ -215,6 +218,7 @@
           },
           {
             "result": {
+              "duration": 203000000,
               "status": "passed"
             },
             "line": 10,
@@ -226,6 +230,7 @@
           },
           {
             "result": {
+              "duration": 191000000,
               "status": "passed"
             },
             "line": 11,
@@ -237,6 +242,7 @@
           },
           {
             "result": {
+              "duration": 78000000,
               "status": "passed"
             },
             "line": 12,
@@ -248,9 +254,21 @@
           },
           {
             "result": {
+              "duration": 516000000,
               "status": "passed"
             },
             "line": 13,
+            "name": "I click on WebTable Option from profile page",
+            "match": {
+              "location": "StepDef.Profile_Steps.iClickOnWebTableOptionFromProfilePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 14,
             "name": "I will Verify firstName,lastName and email from WebTable page",
             "match": {
               "location": "StepDef.WebTable_Steps.iWillVerifyFirstNameLastNameAndEmailFromWebTablePage()"

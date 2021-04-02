@@ -1,0 +1,4 @@
+# Created at 2021-03-31T21:51:29.020
+Boot Manifest-JAR contains absolute paths in classpath 'D:\FrameWorkRepo\WebTableHandlingTalenttek\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+

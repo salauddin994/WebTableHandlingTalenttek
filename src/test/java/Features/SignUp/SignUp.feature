@@ -10,4 +10,5 @@ Feature: SignUp
     Then I click on LogIn link
     Then I input my newly created credentials
     When I click on LogIn button
+    Then I click on WebTable Option from profile page
     Then I will Verify firstName,lastName and email from WebTable page

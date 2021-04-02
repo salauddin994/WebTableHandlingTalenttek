@@ -4,14 +4,16 @@ package PageObject;
 
 import Base.TestData;
 import Base.Util;
+import Base.config;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
-public class SignUpPage {
+public class SignUpPage extends config {
     Faker faker=new Faker();
 
 
@@ -39,11 +41,22 @@ public class SignUpPage {
 
     public void inputValidInformation(){
 
-        firstName.sendKeys(faker.name().firstName());
-        lastName.sendKeys(faker.name().lastName());
-        email.sendKeys(faker.internet().safeEmailAddress());
-        password.sendKeys(TestData.global_studentPassword);
-        confirmPassword.sendKeys(TestData.global_studentPassword);
+        TestData.global_studentFirstName = faker.name().firstName();
+        firstName.sendKeys(global_studentFirstName);
+        System.out.println("Student firstName ==>" + global_studentFirstName);
+
+        TestData.global_studentLastName=faker.name().lastName();
+        lastName.sendKeys(global_studentLastName);
+        System.out.println("Student lastName>>>"+global_studentLastName);
+
+        TestData.global_studentEmail=faker.internet().safeEmailAddress();
+        email.sendKeys(global_studentEmail);
+        System.out.println("Student email address<<>>>>>"+global_studentEmail);
+
+       password.sendKeys(global_studentPassword);
+
+        confirmPassword.sendKeys(global_studentPassword);
+
         Util.dropDownByXpath("//*[@id='signup-form']/div[4]/div[1]/select","Nov");
         Util.dropDownByName("day","09");
         Util.dropDownByName("year","1994");
@@ -65,5 +78,29 @@ public class SignUpPage {
     public void clickCreateMyAccountButton(){
         createMyAccountButton.click();
     }
+
+    @FindBy(how = How.XPATH,using = "//*[@id=\"success_message\"]/div")
+    public WebElement verifyStudentID;
+
+    @FindBy(how = How.XPATH,using = "//*[@id=\"signup-form\"]/input[1]")
+    public WebElement verifyStudentEmail;
+
+
+    public void AssertionWithStudentID(){
+
+        TestData.global_studentID = verifyStudentID.getText().substring(38);
+        Assert.assertEquals(verifyStudentID.getText().substring(38),TestData.global_studentID);
+        System.out.println(global_studentID);
+        TestData.global_studentEmail = verifyStudentEmail.getText();
+        Assert.assertEquals(verifyStudentEmail.getText(),TestData.global_studentEmail);
+    }
+
+    @FindBy(how = How.XPATH,using = "//*[@id=\"navbarSupportedContent\"]/ul/li[2]/a")
+    public WebElement LogInLinkFromHeader;
+
+    public void clickOnLogInLinkFromHeader(){
+        LogInLinkFromHeader.click();
+    }
+
 
 }

@@ -19,6 +19,30 @@ public class LogInPage extends config {
             createNewAccount.click();
         }
 
+    @FindBy(how = How.XPATH,using = "//*[@id=\"login_form\"]/input[1]")
+    public WebElement StudentEmailOrID;
+
+        public void inputStudentEmailOrID(String StudentId){
+            StudentEmailOrID.sendKeys(StudentId);
+        }
+
+    @FindBy(how = How.XPATH,using = "//*[@id=\"login_form\"]/input[2]")
+    public WebElement StudentPassword;
+
+        public void inputStudentPassword(String StudentsPassword){
+            StudentPassword.sendKeys(StudentsPassword);
+        }
+
+
+    @FindBy(how = How.XPATH,using = "//*[@id=\"login_form\"]/input[3]")
+    public WebElement logInButton;
+
+    public void clickOnlogInButton(){
+        logInButton.click();
+    }
+
+
+
 
 
 
