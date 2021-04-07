@@ -3,123 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-04-02T05:28:43.210Z",
+        "start_timestamp": "2021-04-07T04:35:19.031Z",
         "before": [
           {
             "result": {
-              "duration": 3683000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "StepDef.Hook.openBrowser()"
-            }
-          }
-        ],
-        "line": 4,
-        "name": "Login with valid email and password",
-        "description": "",
-        "id": "login;login-with-valid-email-and-password",
-        "after": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "match": {
-              "location": "StepDef.Hook.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 28000000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "I am at talenttek logIn page",
-            "match": {
-              "location": "StepDef.LogIn_Steps.iAmAtTalenttekLogInPage()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "I input valid email address",
-            "match": {
-              "location": "StepDef.LogIn_Steps.iInputValidEmailAddress()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "I input valid password",
-            "match": {
-              "location": "StepDef.LogIn_Steps.iInputValidPassword()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 80000000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "I click on LogIn button",
-            "match": {
-              "location": "StepDef.LogIn_Steps.iClickOnLogInButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1000000,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "I will verify i loggedIn successfully in my existing account",
-            "match": {
-              "location": "StepDef.Profile_Steps.iWillVerifyILoggedInSuccessfullyInMyExistingAccount()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@login"
-          },
-          {
-            "name": "@regression"
-          },
-          {
-            "name": "@smoke"
-          }
-        ]
-      }
-    ],
-    "name": "Login",
-    "description": "",
-    "id": "login",
-    "keyword": "Feature",
-    "uri": "file:src/test/java/Features/LogIn/LogIn.feature",
-    "tags": []
-  },
-  {
-    "line": 1,
-    "elements": [
-      {
-        "start_timestamp": "2021-04-02T05:28:47.028Z",
-        "before": [
-          {
-            "result": {
-              "duration": 2355000000,
+              "duration": 3146000000,
               "status": "passed"
             },
             "match": {
@@ -146,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5000000,
+              "duration": 37000000,
               "status": "passed"
             },
             "line": 4,
@@ -158,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 281000000,
+              "duration": 307000000,
               "status": "passed"
             },
             "line": 5,
@@ -170,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 1356000000,
+              "duration": 1268000000,
               "status": "passed"
             },
             "line": 6,
@@ -182,7 +70,7 @@
           },
           {
             "result": {
-              "duration": 81000000,
+              "duration": 56000000,
               "status": "passed"
             },
             "line": 7,
@@ -194,7 +82,7 @@
           },
           {
             "result": {
-              "duration": 76000000,
+              "duration": 62000000,
               "status": "passed"
             },
             "line": 8,
@@ -206,7 +94,7 @@
           },
           {
             "result": {
-              "duration": 235000000,
+              "duration": 247000000,
               "status": "passed"
             },
             "line": 9,
@@ -218,7 +106,7 @@
           },
           {
             "result": {
-              "duration": 154000000,
+              "duration": 197000000,
               "status": "passed"
             },
             "line": 10,
@@ -230,7 +118,7 @@
           },
           {
             "result": {
-              "duration": 201000000,
+              "duration": 172000000,
               "status": "passed"
             },
             "line": 11,
@@ -242,7 +130,7 @@
           },
           {
             "result": {
-              "duration": 70000000,
+              "duration": 67000000,
               "status": "passed"
             },
             "line": 12,
@@ -254,7 +142,7 @@
           },
           {
             "result": {
-              "duration": 433000000,
+              "duration": 830000000,
               "status": "passed"
             },
             "line": 13,
@@ -266,7 +154,7 @@
           },
           {
             "result": {
-              "duration": 40783000000,
+              "duration": 22547000000,
               "status": "passed"
             },
             "line": 14,
@@ -286,6 +174,9 @@
           },
           {
             "name": "@regression"
+          },
+          {
+            "name": "@test"
           }
         ]
       }

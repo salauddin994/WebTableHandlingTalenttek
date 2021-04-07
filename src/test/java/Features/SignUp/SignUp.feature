@@ -1,5 +1,5 @@
 Feature: SignUp
-  @signup @smoke @regression
+  @signup @smoke @regression @test
   Scenario: SignUp in Talenttek and Sign back in and Verify firstName,lastName and email from WebTable page
     Given I am at talenttek logIn page
     Then I click on Create New account button
