@@ -5,9 +5,9 @@ import Base.config;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
+
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -18,34 +18,77 @@ public class WebTablePage extends config {
         PageFactory.initElements(driver, this);
     }
 
+    public void WebTableHandling(){
 
-    public void webtableHandling(){
-        List<WebElement> rows=driver.findElements(By.xpath("//*[@id=\"page-content-wrapper\"]/div/table/tbody/tr"));
-        int rowsize=rows.size();
-        System.out.println("total number of the row  :>>>>>>"+rowsize);
-
-        List<WebElement> colums=driver.findElements(By.xpath("//*[@id=\"page-content-wrapper\"]/div/table/tbody/tr[1]/td"));
-        int columsize=colums.size();
-        System.out.println("total number of the coloum:>>>>>"+columsize);
-
-        String bxpath="//*[@id=\"page-content-wrapper\"]/div/table/tbody/tr[";
-        String axpath="]/td";
+        List<WebElement>row=driver.findElements(By.xpath("//*[@id=\"page-content-wrapper\"]/div/table/tbody/tr"));
+        int rowsize=row.size();
+        System.out.println("totall row in the table>>>>"+rowsize);
+//
+//        List<WebElement>clm=driver.findElements(By.xpath("//*[@id=\"page-content-wrapper\"]/div/table/tbody/tr[1]/td"));
+//        int clmsize=clm.size();
+//        System.out.println("totall clm in the table>>>>"+clmsize);
 
 
-        List<WebElement>firstname=driver.findElements(By.xpath("//*[@id=\"page-content-wrapper\"]/div/table/tbody/tr/td"));
-        for(int i=1;i<=rowsize;i++){
 
-               WebElement comxpath= driver.findElement(By.xpath(bxpath+i+axpath));
-
-               if (comxpath.getText().contains(global_studentFirstName)){
-                   System.out.println("firstName is exist>>>>>>>"+global_studentFirstName);
-               }
+            String startXpath = "//*[@id=\"page-content-wrapper\"]/div/table/tbody/tr[";
+            String endXpath = "]/td[1]";
 
 
-        }
+            for (int i = 1; i <=rowsize; i++) {
+
+                String fullXpath = startXpath + i + endXpath;
+                WebElement tableData = driver.findElement(By.xpath(fullXpath));
+
+                String actFirstName=tableData.getText();
+                System.out.println(actFirstName);
+
+                if (tableData.getText().equalsIgnoreCase(global_studentFirstName)) {
+
+                    System.out.println("We got her name in the system her position is>>>>>>>>>>>" + global_studentFirstName +"   "+"and position is >>>>>"+ i);
+                    break;
+                }
+                Assert.assertEquals(actFirstName,global_studentFirstName);
+
+
+            }
+
+
 
 
     }
+
+
+    public void webTablePlayer(){
+        String firstname = global_studentFirstName;
+        List<WebElement> rows2 = driver.findElements(By.xpath("//*[@id='page-content-wrapper']/div/table/tbody/tr"));
+
+        for(WebElement row2:rows2)
+        {
+            List<WebElement> columns2 = row2.findElements(By.xpath("//*[@id='page-content-wrapper']/div/table/tbody/tr[1]/td"));
+
+            for(WebElement col2:columns2)
+            {
+                if(col2.getText().equalsIgnoreCase(global_studentFirstName))
+                {
+                    firstname = global_studentFirstName;
+                }
+
+                if (firstname == global_studentFirstName)
+                {
+
+                    //Print the required player details
+                    System.out.print(col2.getText() + " ");
+
+                }
+            }
+            firstname = global_studentFirstName;
+            System.out.println();
+        }
+
+    }
+
+
+
 
 
 

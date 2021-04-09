@@ -1,14 +1,22 @@
 package StepDef;
 
-import Base.Util;
+import Base.TestData;
 import Base.config;
 import PageObject.WebTablePage;
 import io.cucumber.java.en.Then;
+import org.testng.Assert;
 
-public class WebTable_Steps extends config {
+public class WebTableSteps extends config {
     WebTablePage webtable=new WebTablePage(driver);
     @Then("I will Verify firstName,lastName and email from WebTable page")
     public void iWillVerifyFirstNameLastNameAndEmailFromWebTablePage() {
-        webtable.webtableHandling();
+
+//        webtable.WebTableHandling();
+
+        webtable.webTablePlayer();
+
+
+
+
     }
 }
