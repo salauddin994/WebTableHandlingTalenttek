@@ -20,6 +20,8 @@ public class WebTablePage extends config {
 
     public void WebTableHandling(){
 
+        //Here i perfectly print firstName but can't print lastName and Email address.  How can i improve it...
+
         List<WebElement>row=driver.findElements(By.xpath("//*[@id=\"page-content-wrapper\"]/div/table/tbody/tr"));
         int rowsize=row.size();
         System.out.println("totall row in the table>>>>"+rowsize);
@@ -44,7 +46,7 @@ public class WebTablePage extends config {
 
                 if (tableData.getText().equalsIgnoreCase(global_studentFirstName)) {
 
-                    System.out.println("We got her name in the system her position is>>>>>>>>>>>" + global_studentFirstName +"   "+"and position is >>>>>"+ i);
+                    System.out.println("We got her name in the system her position is>>>>>>>>>>>" + actFirstName +"   "+"and position is >>>>>"+ i);
                     break;
                 }
                 Assert.assertEquals(actFirstName,global_studentFirstName);
@@ -59,6 +61,11 @@ public class WebTablePage extends config {
 
 
     public void webTablePlayer(){
+        // here result found complete row result by using firstName but problem is it's print so many time
+
+
+
+
         String firstname = global_studentFirstName;
         List<WebElement> rows2 = driver.findElements(By.xpath("//*[@id='page-content-wrapper']/div/table/tbody/tr"));
 
@@ -87,7 +94,46 @@ public class WebTablePage extends config {
 
     }
 
+    public void webTableHandleWithFnameLnameEmail(){
 
+        //it's acting like ghost ....sometimes acting good sometimes not
+
+        List<WebElement>row=driver.findElements(By.tagName("tr"));
+        int rowCount=row.size();
+        System.out.println("totall row in this table is>>>>>"+rowCount);
+
+        List<WebElement>clm=driver.findElements(By.tagName("td"));
+        int clmCount=clm.size();
+//		System.out.println(clmCount);
+
+
+        for(WebElement rows:row) {
+            List<WebElement>colms=rows.findElements(By.tagName("td"));
+            for(WebElement colomn:colms) {
+
+                if(colomn.getText().contains(global_studentFirstName)) {
+                    System.out.println("student firstname exist:>>>>>"+colomn.getText());
+
+                }
+//                if(colomn.getText().contains(global_studentLastName)) {
+//                    System.out.println("student lastName exist>>>>>>"+colomn.getText());
+//
+//                }
+//                if(colomn.getText().contains(global_studentEmail)) {
+//                    System.out.println("student email exist>>>>>>>"+colomn.getText());
+//
+//                }
+
+
+            }
+
+        }
+
+
+
+
+
+    }
 
 
 

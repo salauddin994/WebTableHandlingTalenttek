@@ -13,7 +13,8 @@ public class WebTableSteps extends config {
 
 //        webtable.WebTableHandling();
 
-        webtable.webTablePlayer();
+//        webtable.webTablePlayer();
+        webtable.webTableHandleWithFnameLnameEmail();
 
 
 
