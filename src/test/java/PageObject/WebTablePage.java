@@ -46,7 +46,7 @@ public class WebTablePage extends config {
 
                 if (tableData.getText().equalsIgnoreCase(global_studentFirstName)) {
 
-                    System.out.println("We got her name in the system her position is>>>>>>>>>>>" + actFirstName +"   "+"and position is >>>>>"+ i);
+                    System.out.println("FirstName is exist>>>>>>>>>>>" + actFirstName +"   "+"and position is >>>>>"+ i);
                     break;
                 }
                 Assert.assertEquals(actFirstName,global_studentFirstName);

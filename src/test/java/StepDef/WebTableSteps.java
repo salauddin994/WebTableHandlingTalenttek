@@ -11,10 +11,10 @@ public class WebTableSteps extends config {
     @Then("I will Verify firstName,lastName and email from WebTable page")
     public void iWillVerifyFirstNameLastNameAndEmailFromWebTablePage() {
 
-//        webtable.WebTableHandling();
+        webtable.WebTableHandling();
 
 //        webtable.webTablePlayer();
-        webtable.webTableHandleWithFnameLnameEmail();
+//        webtable.webTableHandleWithFnameLnameEmail();
 
 
 
